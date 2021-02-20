@@ -31,6 +31,8 @@ public class RelativeLocatorsNew {
 //			
 //			WebElement ele4 = d.findElement(withTagName("label").below(By.xpath("//input[@id='password']")));
 //			System.out.println(ele4.getAttribute("for"));
+			
+			
 		} catch (NoSuchElementException e) {			
 			e.printStackTrace();
 		}

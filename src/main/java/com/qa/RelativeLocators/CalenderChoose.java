@@ -20,7 +20,7 @@ public class CalenderChoose {
 		
 		String expdate = "10/10/2021";
 		d.findElementByXPath("//input[@id='datepicker']").click();
-		/*
+		
 		String[] splitdate = expdate.split("/");
 		int date = Integer.parseInt(splitdate[1]);
 		int month = Integer.parseInt(splitdate[0]);
@@ -56,7 +56,7 @@ public class CalenderChoose {
 		}
 		d.findElementByLinkText(""+date).click();
 	
-	*/
+	
 		JavascriptExecutor js  = (JavascriptExecutor)d;
 		js.executeScript("$('#datepicker').datepicker(\"setDate\", '10/10/2022')");
 	}

@@ -6,28 +6,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.SessionId;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class DebugExistingBrowser {
 
 	public static void main(String[] args) {
-	WebDriverManager.chromedriver().setup();
+	//WebDriverManager.chromedriver().setup();
 	
 	ChromeOptions option = new ChromeOptions();
 	option.setExperimentalOption("debuggerAddress", "localhost:54754");
-	ChromeDriver d = new ChromeDriver(option);
+	ChromeDriver d = new ChromeDriver();
 	
-	//d.get("http://leaftaps.com/opentaps/control/main");
+	d.get("http://leaftaps.com/opentaps/control/main");
 	d.manage().window().maximize();
 	
-	/*Capabilities capabilities = d.getCapabilities();
+	Capabilities capabilities = d.getCapabilities();
 	for(String cap : capabilities.getCapabilityNames())
 	{
 		System.out.println(cap);
 		System.out.println("---------------");
 		System.out.println(capabilities.getCapability(cap));
 	}
-	*/
+	
 	
 	d.findElement(By.id("username")).sendKeys("demosalesmanager");
 	SessionId session = d.getSessionId();
