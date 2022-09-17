@@ -26,7 +26,7 @@ public class EmailRead {
 		Session emailsession = Session.getDefaultInstance(prop);	
 
 		Store store = emailsession.getStore("imap");
-		store.connect("imap.gmail.com", "tgsgnanasekar@gmail.com", "9790375500@Tgs");
+		store.connect("imap.gmail.com", "email@gmail.com", "password");
 
 		*/
 		
@@ -40,7 +40,7 @@ public class EmailRead {
 		Session emailsession = Session.getDefaultInstance(prop);	
 
 		Store store = emailsession.getStore("pop3s");
-		store.connect("pop.gmail.com", "tgsgnanasekar@gmail.com", "9790375500@Tgs");
+		store.connect("pop.gmail.com", "email@gmail.com", "password");
 
 		Folder inbox = store.getFolder("INBOX");
 		inbox.open(Folder.READ_ONLY);
