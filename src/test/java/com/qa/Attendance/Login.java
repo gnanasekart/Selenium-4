@@ -26,8 +26,8 @@ public class Login {
 		driver.manage().deleteAllCookies();
 
 		driver.findElement(By.id("txtID")).sendKeys("861");
-		driver.findElement(By.id("txtPwd")).sendKeys("9994551183@Psk");
-		driver.findElement(By.id("txtCompName")).sendKeys("ameex");
+		driver.findElement(By.id("txtPwd")).sendKeys("10x@Psk");
+		driver.findElement(By.id("txtCompName")).sendKeys("amxxx");
 		driver.findElement(By.id("lblLogin")).click();
 		Thread.sleep(5000);
 
