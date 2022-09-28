@@ -3,6 +3,7 @@ package com.qa.RelativeLocators;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,7 @@ public class CalenderChoose {
 		d.switchTo().frame(0);
 		
 		String expdate = "10/10/2021";
-		d.findElementByXPath("//input[@id='datepicker']").click();
+		d.findElement(By.xpath("//input[@id='datepicker']")).click();
 		
 		String[] splitdate = expdate.split("/");
 		int date = Integer.parseInt(splitdate[1]);
@@ -45,16 +46,16 @@ public class CalenderChoose {
 			System.out.println("negative");
 		}
 		
-		d.findElementByXPath("//input[@id='datepicker']").click();
+		d.findElement(By.xpath("//input[@id='datepicker']")).click();
 			
-		WebElement prev = d.findElementByXPath("//span[text()='Prev']");
+		WebElement prev = d.findElement(By.xpath("//span[text()='Prev']"));
 		
 		for(int i = 0; i< clicks; i++)
 		{
-			d.findElementByXPath("//span[text()='Next']").click();
+			d.findElement(By.xpath("//span[text()='Next']")).click();
 			Thread.sleep(500);
 		}
-		d.findElementByLinkText(""+date).click();
+		d.findElement(By.linkText(""+date)).click();
 	
 	
 		JavascriptExecutor js  = (JavascriptExecutor)d;

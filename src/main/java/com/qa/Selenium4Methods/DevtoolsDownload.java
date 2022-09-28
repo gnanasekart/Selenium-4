@@ -1,5 +1,6 @@
 package com.qa.Selenium4Methods;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.Command;
 import org.openqa.selenium.devtools.DevTools;
@@ -15,15 +16,15 @@ public class DevtoolsDownload {
 	public static void main(String[] args) 
 	{
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver d = new ChromeDriver();
-		DevTools devTools = d.getDevTools();
+		ChromeDriver driver = new ChromeDriver();
+		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 		//download file using SetDownloadBehaviorBehavior method in Page class, 
 		//we had modified this method based on our need
 		devTools.send(setDownloadBehavior(SetDownloadBehaviorBehavior.ALLOW, "D:\\study\\selenium\\naveen\\Selenium 4\\TL\\Week 3"));
 
-		d.get("https://the-internet.herokuapp.com/download");
-		d.findElementByXPath("//a[@href='download/Space.jpg']").click();
+		driver.get("https://the-internet.herokuapp.com/download");
+		driver.findElement(By.xpath("//a[@href='download/Space.jpg']")).click();
 	}
 
 	public static Command<Void> setDownloadBehavior(SetDownloadBehaviorBehavior behavior, java.lang.String downloadPath) 

@@ -19,5 +19,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/t.gnanasekar/.m2/repository/org/seleniumhq/selenium/selenium-devtools/4.0.0-alpha-4/selenium-devtools-4.0.0-alpha-4.jar" sourcepath="C:/Users/t.gnanasekar/.m2/repository/org/seleniumhq/selenium/selenium-devtools/4.0.0-alpha-4/selenium-devtools-4.0.0-alpha-4-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-devtools"/>
+			<attribute name="maven.version" value="4.0.0-alpha-4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

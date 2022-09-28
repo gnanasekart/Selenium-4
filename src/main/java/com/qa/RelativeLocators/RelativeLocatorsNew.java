@@ -1,7 +1,7 @@
 package com.qa.RelativeLocators;
 
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -12,30 +12,30 @@ public class RelativeLocatorsNew {
 
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver d = new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver();
 		
-		d.get("http://leaftaps.com/opentaps/control/main");
+		driver.get("http://leaftaps.com/opentaps/control/main");
 		
-	//	WebElement ele = d.findElement(withTagName("input").toLeftOf(By.xpath("//label[text()='Password']")));
+	//	WebElement ele = driver.findElement(with(By.tagName("input")).toLeftOf(By.xpath("//label[text()='Password']")));
 		//System.out.println(ele.getAttribute("id"));
 
 		try {
-			WebElement ele1 = d.findElement(withTagName("input").toRightOf(By.xpath("//label[text()='Username']")));
+			WebElement ele1 = driver.findElement(with(By.tagName("input")).toRightOf(By.xpath("//label[text()='Username']")));
 			System.out.println(ele1.getAttribute("id"));
 			
-//			WebElement ele2 = d.findElement(withTagName("p").below(By.xpath("//label[text()='Username']")));
+//			WebElement ele2 = driver.findElement(with(By.tagName("p")).below(By.xpath("//label[text()='Username']")));
 //			System.out.println(ele2.getAttribute("class"));
 //			
-//			WebElement ele3 = d.findElement(withTagName("label").toLeftOf(By.xpath("//input[@id='password']")));
+//			WebElement ele3 = driver.findElement(with(By.tagName("label")).toLeftOf(By.xpath("//input[@id='password']")));
 //			System.out.println(ele3.getAttribute("for"));
 //			
-//			WebElement ele4 = d.findElement(withTagName("label").below(By.xpath("//input[@id='password']")));
+//			WebElement ele4 = driver.findElement(with(By.tagName("label")).below(By.xpath("//input[@id='password']")));
 //			System.out.println(ele4.getAttribute("for"));
 			
 			
 		} catch (NoSuchElementException e) {			
 			e.printStackTrace();
 		}
-		d.close();
+		//driver.close();
 	}
 }
